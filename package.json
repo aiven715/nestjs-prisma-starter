@@ -1,0 +1,26 @@
+{
+  "name": "backend-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "",
+    "run": "",
+    "clean": "",
+    "start": "tail -f /dev/null",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio",
+    "prisma:migrate": "prisma migrate"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.1",
+    "prettier": "^2.4.1",
+    "prisma": "3.1.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "@prisma/client": "3.1.1"
+  }
+}

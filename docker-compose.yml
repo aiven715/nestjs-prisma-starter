@@ -1,0 +1,25 @@
+version: "3"
+services:
+  api:
+    build: .
+    command: "yarn start"
+    volumes:
+      - .:/var/www
+      - /var/www/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=5001
+      - DATABASE_URL
+    ports:
+      - "5001:5001"
+      - "5555:5555"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:9.6
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
