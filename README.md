@@ -7,7 +7,7 @@ docker-compose up
 Also if you're running application for the first time run:
 
 ```
-yarn prisma:generate && TODO: apply migration command
+yarn prisma:generate && yarn prisma:migrate dev
 ```
 
 ## Generating a new migration from schema and applying it:
